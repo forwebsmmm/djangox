@@ -16,6 +16,7 @@ pylint-django = "*"
 geopandas = "*"
 osmnx = "*"
 folium = "*"
+gunicorn = "==19.9.0"
 
 [requires]
 python_version = "3.7"
