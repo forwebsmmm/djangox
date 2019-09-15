@@ -1,0 +1,7 @@
+{% extends '_base.html' %}
+{% block title %}Show Routes{% endblock title %}
+{% block content %}
+    <div class="embed-responsive embed-responsive-21by9">
+        <iframe class="embed-responsive-item" src="{% url 'map_show' object.pk %}"></iframe>
+    </div>
+{% endblock content %}

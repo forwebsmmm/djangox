@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+{% block title %}Routes{% endblock title %}
+{% block content %}
+    {% for route in object_list %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold">{{ route.route_name }}</span> &middot;
+                <span class="text-muted">by {{ route.author }} </span>
+            </div>
+            <div class="card-body">
+                <!-- {# article.body #}
+                <a href="{# url 'article_edit' article.pk #}">Edit</a> |
+                <a href="{# url 'article_delete' article.pk #}">Delete</a> -->
+                <p>{{ route.point_a }}</p>
+                <p>{{ route.point_b }}</p>
+                <p>{{ route.point_c }}</p>
+                <p>{{ route.point_d }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'route_show' route.pk %}">Show route</a>
+            </div>
+        </div>
+        <br />
+    {% endfor %}
+{% endblock content %}

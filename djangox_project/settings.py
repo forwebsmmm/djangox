@@ -42,10 +42,14 @@ INSTALLED_APPS = [
     # Third-party
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.github',
     'crispy_forms',
     'debug_toolbar',
 
     # Local
+    'osmnx_routes',
     'users',
     'pages',
 ]
@@ -154,7 +158,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SITE_ID = 1
+SITE_ID = 3
 
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
